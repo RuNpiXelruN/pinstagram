@@ -1,0 +1,44 @@
+
+             <!-------------------------------------------->
+             <!--          NavBar Section                -->
+             <!--------------------------------------------> 
+
+
+
+
+<!--<div class="navcontainer navbar-dropdown">-->
+<!--    <div class="nav-elements">-->
+<!--        <ul class="dropdown-ul">-->
+<!--            <li class="dropdown-main-li">-->
+<!--                <a class="nav-item" href="#"><img class="dropdown-image" src="<%= asset_path( 'menu-dropdown-icon.png' ) %>"></a>-->
+<!--                <div class="nav-content">-->
+<!--                    <div class="nav-sub">-->
+<!--                        <ul>-->
+<!--                            <a href="http://socialplayground.com.au"><li class="home-li"><p class="home-p">Home</p></li></a>-->
+<!--                            <a href="http://socialplayground.com.au/#toys"><li class="toys-li"><p class="toys-p">Toys</p></li></a>-->
+<!--                            <a href="http://socialplayground.com.au/#past-events"><li class="pastevents-li"><p class="pastevents-p">Past Events</p></li></a>-->
+<!--                            <a href="http://socialplayground.com.au/#contact"><li class="contact-li"><p class="contact-p">Contact</p></li></a>-->
+<!--                            <a href="http://socialplayground.com.au/#partners"><li class="partners-li"><p class="partners-p">Partners</p></li></a>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--        <a href="/"><img class="logo-main" src="<%= asset_path('social-playground-logo.png')%>"></a>-->
+<!--    </div>-->
+<!--</div>             <!-----------------  /Dropdown Navbar Section   ----------------->
+
+
+
+<div class="navcontainer navbar-desktop">
+    <div class="nav-elements">
+        <%= link_to "Pinstagram", root_path, class: "logo" %>
+        <div class="nav-list">
+            <ul class="nav-ul">
+                <li><%= link_to "New Post", new_post_path %></li>
+                <li><%= link_to "Login", root_path %></li>
+                <li><%= link_to "Register", root_path %></li>
+            </ul>
+        </div>
+    </div>
+</div>              <!-----------------  /Desktop Navbar Section   ----------------->

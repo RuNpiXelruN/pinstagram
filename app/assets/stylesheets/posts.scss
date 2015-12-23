@@ -1,3 +1,40 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.post-main-section {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    
+    .post-content {
+        width: 30vw;
+        margin-left: 35vw;
+        background: white;
+        border: 0.1vw solid rgba(10,10,10,0.1);
+        margin-bottom: 3vw;
+        
+        .post-owner {
+            border-bottom: 0.1vw solid rgba(10, 10, 10, 0.1);
+            padding: 1vw;
+            color: #7070CE;
+            text-align: left;
+            font-size: 1.3vw;
+        }
+        
+        .post-image {
+            border-bottom: 0.1vw solid rgba(10,10,10,0.1);
+            padding: 2vw 0;
+            
+            img {
+                width: 26vw;
+            }
+        }
+        .post-caption {
+            padding: 2vw 0;
+            font-size: 1.4vw;
+        }
+    }
+}
