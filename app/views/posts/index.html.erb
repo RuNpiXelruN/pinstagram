@@ -8,6 +8,7 @@
             <li class="post-owner">Justin Davidson</li>
             <li class="post-image"><%= link_to ( image_tag post.image.url(:medium)), post_path(post) %></li>
             <li class="post-caption"><%= post.caption %></li>
+            <%= link_to "Edit", edit_post_path(post) %>
         </div>
     <% end %>
 </ul>

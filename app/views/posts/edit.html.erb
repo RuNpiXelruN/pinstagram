@@ -1,0 +1,22 @@
+
+<ul class="post-main-section">
+        <div class="post-content">
+            <li class="post-owner">Justin Davidson</li>
+            <li class="post-image"><%= image_tag @post.image.url(:medium) %></li>
+            <li class="post-caption"><%= @post.caption %></li>
+            
+        </div>
+        <%= link_to "Back", posts_path %>
+</ul>
+
+<div class="edit-post-section">
+    <h1 class="edit-post-header">Update Post!</h1>
+    <div class="edit-post-form">
+        <%= form_for @post, html: { multipart: true } do |f| %>
+            <%= f.file_field :image %>
+            <%= f.text_area :caption %>
+            <%= f.submit "Update!", class: "edit-post-submit" %>
+            <%= link_to "Cancel", post_path(@post) %>
+        <% end %>
+    </div>
+</div>
