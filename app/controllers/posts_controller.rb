@@ -11,8 +11,13 @@ class PostsController < ApplicationController
     end
     
     def create
-        @post = Post.create(post_params)
-        redirect_to posts_path
+        if @post = Post.create(post_params)
+            flash[:success] = "Your post has been created!"
+            redirect_to posts_path
+        else
+            flash[:notice] = "Error. Post was not created."
+            render :new
+        end
     end
     
     def show
@@ -24,10 +29,13 @@ class PostsController < ApplicationController
     end
     
     def update
-        
-        @post.update(post_params)
-        
-        redirect_to posts_path(@post)
+        if @post.update(post_params)
+            redirect_to posts_path
+            flash[:notice] = "Succesfully Edited Post!"
+        else
+            flash.now[:notice] = "Error. Post did was not updated."
+            render :edit
+        end
     end
     
     def destroy
