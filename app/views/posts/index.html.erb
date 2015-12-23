@@ -6,7 +6,7 @@
     <% @posts.each do |post| %>
         <div class="post-content">
             <li class="post-owner">Justin Davidson</li>
-            <li class="post-image"><%= image_tag post.image.url(:medium) %></li>
+            <li class="post-image"><%= link_to ( image_tag post.image.url(:medium)), post_path(post) %></li>
             <li class="post-caption"><%= post.caption %></li>
         </div>
     <% end %>

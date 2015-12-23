@@ -1,6 +1,11 @@
-<h1>New Post Form</h1>
-<%= form_for @post, html: { multipart: true } do |f| %>
-    <%= f.file_field :image %>
-    <%= f.text_area :caption %>
-    <%= f.submit %>
-<% end %>
+
+<div class="new-post-section">
+    <h1 class="new-post-header">Create Post!</h1>
+    <div class="new-post-form">
+        <%= form_for @post, html: { multipart: true } do |f| %>
+            <%= f.file_field :image %>
+            <%= f.text_area :caption %>
+            <%= f.submit "Post!", class: "new-post-submit" %>
+        <% end %>
+    </div>
+</div>
