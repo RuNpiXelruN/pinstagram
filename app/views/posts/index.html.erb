@@ -8,6 +8,22 @@
             <li class="post-owner"><%= link_to post.user.user_name, post_path(post) %></li>
             <li class="post-image"><%= link_to ( image_tag post.image.url(:medium)), post_path(post) %></li>
             <li class="post-caption"><%= post.caption %></li>
+            
+            <% if post.comments %>
+                <% post.comments.each do |comment| %>
+                    <%= link_to comment.user.user_name %>
+                    <%= comment.content %>
+                    <% if comment.user == current_user %>
+                        <%= link_to post_comment_path(post, comment), method: :delete, data: {confirm: "Are you sure?"} %>
+                    <% end %>
+                <% end %>
+            
+                <%= form_for [post, post.comments.new] do |f| %>
+                    <%= f.text_field :content, placeholder: "Add a comment..." %>
+                <% end %>
+            <% end %>
+            
+            
             <% if post.user_id == current_user.id %>
                 <%= link_to "Edit", edit_post_path(post) %>
                 <%= link_to "Delete", post_path(post), method: :delete, data: { confirm: "Are you sure?" } %>
@@ -15,3 +31,4 @@
         </div>
     <% end %>
 </ul>
+ 
