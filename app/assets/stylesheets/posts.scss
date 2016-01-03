@@ -42,19 +42,19 @@
 .new-post-section {
     text-align: center;
     width: 46vw;
-    margin-left: 29vw;
-    background: #A58888;
+    margin-left: 28vw;
+    background: #CECBCB;
     padding-top: 1vw;
-    margin-top: 12vw;
-    border-radius: 9vw;
-    box-shadow: 0vw 0vw 5vw -1vw;
+    margin-top: 8vw;
+    border-radius: 1vw;
+    box-shadow: 0vw 0vw 4vw -1vw;
+    height: 41vw;
     
     .new-post-header {
         text-transform: uppercase;
         font-family: monospace;
         font-size: 4vw;
     }
-    
     form#new_post {
         display: table-caption;
         width: 42vw;
@@ -73,9 +73,10 @@
             margin-bottom: 2vw;
         }
         input.new-post-submit {
-            background: beige;
-            font-size: 2vw;
-            border-radius: 1vw;
+            background: #252524;
+            color: white;
+            font-size: 1.5vw;
+            border-radius: 0.5vw;
             text-transform: uppercase;
             font-family: monospace;
             padding: 1vw 2vw;
@@ -85,13 +86,13 @@
 .edit-post-section {
     text-align: center;
     width: 46vw;
-    margin-left: 27vw;
-    background: #A58888;
+    margin-left: 28vw;
+    background: #CECBCB;
     padding-top: 1vw;
-    margin-top: 3vw;
-    border-radius: 9vw;
-    box-shadow: 0vw 0vw 5vw -1vw;
-    margin-bottom: 5vw;
+    margin-top: 8vw;
+    border-radius: 1vw;
+    box-shadow: 0vw 0vw 4vw -1vw;
+    height: 41vw;
     
     .edit-post-header {
         text-transform: uppercase;
@@ -116,9 +117,10 @@
             margin-bottom: 2vw;
         }
         input.edit-post-submit {
-            background: beige;
-            font-size: 2vw;
-            border-radius: 1vw;
+            background: #252524;
+            color: white;
+            font-size: 1.5vw;
+            border-radius: 0.5vw;
             text-transform: uppercase;
             font-family: monospace;
             padding: 1vw 2vw;

@@ -21,16 +21,17 @@ class PostsController < ApplicationController
     end
     
     def show
-        
+        #   being called in before_action above
     end
     
     def edit
-       
+            #   being called in before_action above
     end
     
     def update
+        #   being called in before_action above
         if @post.update(post_params)
-            redirect_to posts_path
+            redirect_to posts_path(@post)
             flash[:notice] = "Succesfully Edited Post!"
         else
             flash.now[:notice] = "Error. Post did was not updated."
@@ -39,7 +40,7 @@ class PostsController < ApplicationController
     end
     
     def destroy
-       
+       #   being called in before_action above
        @post.destroy
        
        redirect_to root_path

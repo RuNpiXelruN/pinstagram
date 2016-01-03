@@ -10,14 +10,27 @@
         <%= link_to "Delete", @post, method: :delete, data: { confirm: "Are you sure?" } %>
 </ul>
 
+
 <div class="edit-post-section">
-    <h1 class="edit-post-header">Update Post!</h1>
+    <h1 class="edit-post-header">Edit Post!</h1>
     <div class="edit-post-form">
         <%= form_for @post, html: { multipart: true } do |f| %>
             <%= f.file_field :image %>
             <%= f.text_area :caption %>
             <%= f.submit "Update!", class: "edit-post-submit" %>
-            <%= link_to "Cancel", post_path(@post) %>
         <% end %>
     </div>
 </div>
+
+
+<!--<div class="edit-post-section">-->
+<!--    <h1 class="edit-post-header">Update Post!</h1>-->
+<!--    <div class="edit-post-form">-->
+<!--        <%= form_for @post, html: { multipart: true } do |f| %>-->
+<!--            <%= f.file_field :image %>-->
+<!--            <%= f.text_area :caption %>-->
+<!--            <%= f.submit "Update!", class: "edit-post-submit" %>-->
+<!--            <%= link_to "Cancel", post_path(@post) %>-->
+<!--        <% end %>-->
+<!--    </div>-->
+<!--</div>-->
