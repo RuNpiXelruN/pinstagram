@@ -1,7 +1,7 @@
 
 <ul class="post-main-section">
         <div class="post-content">
-            <li class="post-owner">Justin Davidson</li>
+            <li class="post-owner"><%= @post.user.user_name %></li>
             <li class="post-image"><%= image_tag @post.image.url(:medium) %></li>
             <li class="post-caption"><%= @post.caption %></li>
             
